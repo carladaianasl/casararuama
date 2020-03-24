@@ -1,6 +1,7 @@
  
 document.getElementById('menu').innerHTML = 
-		"<nav id='menu' class='menu'>"+
+		"<div class='toggle'><i class='fa fa-bars' aria-hidden='true'></i></div>"+
+		"<nav class='menu'>"+
 		"	<ul>"+
 		"		<li><a href='index.html' id='m1'>Início</a></li>"+
 		"		<li><a href='casa.html' id='m2' >Conheça a casa</a></li>"+
@@ -10,6 +11,8 @@ document.getElementById('menu').innerHTML =
 		"		<li><a href='contato.html' id='m6' >Fale Conosco</a></li>"+
 		"	</ul>"+
 		"	</nav>"
+
+
 
 
 
