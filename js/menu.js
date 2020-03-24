@@ -1,7 +1,8 @@
  
 document.getElementById('menu').innerHTML = 
-		"<div class='toggle'><i class='fa fa-bars' aria-hidden='true'></i></div>"+
+		
 		"<nav class='menu'>"+
+		"<div class='toggle'><div class='toggle2'><i class='fa fa-bars' aria-hidden='true'></i></div></div>"+
 		"	<ul>"+
 		"		<li><a href='index.html' id='m1'>Início</a></li>"+
 		"		<li><a href='casa.html' id='m2' >Conheça a casa</a></li>"+
@@ -15,7 +16,11 @@ document.getElementById('menu').innerHTML =
 
 
 
-
+	$(document).ready(function(){
+		$('.toggle2').click(function(){
+				$('ul').toggleClass('active');
+			})
+})
 
 
  	var path = window.location.pathname;
