@@ -1,0 +1,633 @@
+body {
+background-color: white;
+}
+
+#topo {
+background-image: url(../img/bg2.png);
+background-repeat: no-repeat;
+background-position: top center;
+background-size: cover;
+position: absolute;
+width: 100%;
+height: 85%;
+top:0px;
+left: 0px;
+animation: slide 15s infinite;
+
+}
+
+@keyframes slide{
+	0%{
+	background-image: url(../img/bg2.png);
+	}
+	50%{
+	background-image: url(../img/bg.png);
+	}
+}
+
+
+
+
+
+
+#menu{
+position: absolute;
+top: 0%;
+text-align: center;
+width: 100%;
+font-family: 'Raleway', sans-serif;
+padding: 0px;
+
+}
+
+#menu ul{
+padding: 0 0 0 0;
+margin: 0px;
+list-style: none;
+
+}
+
+#menu ul li{
+	display: inline;
+
+}
+
+#menu ul li a{
+	padding: 6px 12px 10px;
+	display: inline-block;
+	text-decoration: none;
+	padding-top: 1.5%;
+	color: black;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+a:hover{
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.active{
+	background: rgba(255, 255, 255, 0.2);
+}
+
+
+#box2{
+	background: linear-gradient(0deg, white, #e6e9e8);
+	width: 90%;
+	height: auto;
+	max-height: 900px;
+	position: absolute;
+	left: 0px;
+	top: 85%;
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	
+}
+
+#corpo{
+	background: linear-gradient(0deg, white, #e6e9e8);
+	width: 90%;
+	height: auto;
+	max-height: 900px;
+	position: absolute;
+	left: 0px;
+	top: 70%;
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	
+}
+
+
+
+
+.box2 {
+display:block;
+width: 25%;
+height: auto;
+float: left;
+padding: 40px 0px 30px 0px;
+text-align: center;
+
+}
+
+
+.logo img{
+position: absolute;
+left: 10%;
+top: 15%;
+width: 400px;
+height: auto;
+}
+
+#box2 img{
+	width: 30%;
+	padding-top: 20px;
+}
+
+.texto1{
+	font-size: 30px;
+	padding-bottom: 10px;
+	font-family: 'Raleway', sans-serif;
+
+}
+.texto2{
+	font-size: 20px;
+	font-family: arial;
+	padding-bottom: 30px;
+	font-family: 'Raleway', sans-serif;
+}
+.texto3{
+	font-size: 16px;
+	font-family: arial;
+	padding-top: 20px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+
+
+}
+
+.button{
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 18px;
+	margin: 4px, 2px;
+	padding: 16px 32px;
+	cursor: pointer;
+	font-family: 'Raleway', sans-serif;
+	font-weight: regular;
+
+	
+	
+	
+}
+
+.button1{	
+	background: linear-gradient(180deg, #4b0008, #87000f);
+	color: white;
+	border: 2px solid #87000f;
+	transition: 0.4s;
+	letter-spacing: 2px;
+}
+
+.button1:hover {
+background: linear-gradient(180deg, #F8F8F8, #F0F0F0);
+border: 2px solid #87000f;
+color: #87000f;
+font-weight: bolder;
+letter-spacing: 4px;
+}
+
+
+
+
+
+#box1{
+	position: absolute;
+	top: 36%;
+	left: 10%;
+	width: 400px;
+
+}
+
+
+ p {
+ 	display: block;
+    font-size: 18px;
+    color:black;  
+    text-align: center;
+    padding: 10px 15% 0px 15%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+
+ h1 {
+    font-size: 14px;
+    color:black;
+    text-align: center;
+    padding: 5px 10% 10px 10%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+
+.titulo{
+	text-align: center;
+	padding-top: 40px;
+	font-family: 'Raleway', sans-serif;
+    font-weight: regular;
+    color: brown;
+    font-size: 30px;
+}
+
+
+
+
+#box3{
+	width: 90%;
+	height: auto;
+	position: absolute;
+	left: 0px;
+	top: 100%;
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	
+}
+
+.box3{
+	display:block;
+	width: 33.3%;
+	height: auto;
+	float: left;
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	
+}
+	
+
+
+ h2 {
+    text-align: center;
+    padding: 5px 10% 10px 10%;
+    color: brown;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+    
+
+ h3 {
+    font-size: 14px;
+    color:black;
+    text-align: right;
+    padding: 5px 15% 10px 15%;
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: normal;
+}
+
+ h4 {
+    font-size: 14px;
+    color:black;
+    text-align: left;
+    padding: 5px 15% 10px 15%;
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: normal;
+}
+
+#bottom{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	left:0px;
+	top: 105%;
+	display: block;
+	text-align: center;
+	background: linear-gradient(0deg, #acacac, #c4c4c4);
+
+}
+
+
+
+.b1{
+	width: 30%;
+	height: auto;
+	float: left;
+	padding: 20px 0 10px 6%;
+
+}
+
+.b2{
+	float: right;
+	height: 100%;
+	width: 30%;
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+
+}
+
+#b2{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 40%;
+	height: auto;
+	padding: 0 10% 50px 0;
+
+}
+
+#b2texto{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: auto;
+	height: auto;
+	padding: 0 10% 20px 0;
+	font-size: 12px;
+	font-family: 'Baloo Da 2', cursive;
+
+}
+
+#bottom img{
+	display: block;
+	right: 0px;
+	float: right;
+	text-align: center;
+	width: 10%;
+
+}
+.b3{
+	float: left;
+	bottom: 0px;
+	height: auto;
+	width: 16%;
+	padding: 20px 0 10px 0;
+
+}
+
+
+.b4{
+	float: left;
+	width: 1px;
+	height: 110px;
+	background-color: gray;
+}
+
+#b4{
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 35%;
+}
+
+
+
+
+#topo2 {
+background-image: url(../img/bg3.png);
+background-repeat: no-repeat;
+background-position: top center;
+background-size: cover;
+position: absolute;
+width: 100%;
+height: 85%;
+top:0px;
+left: 0px;
+}
+
+
+.titulo3{
+	position: absolute;
+	margin-top: 8%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+    color: brown;
+    font-size: 30px;
+}
+
+
+#meio{
+	position: absolute;
+	left: 0px;
+	top: 30%;
+	width: 90%;
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+
+
+
+#form-bg{
+	position: absolute;
+	left: 0px;
+	top: 30%;
+	width: 50%;
+	padding-left: 25%;
+	padding-right: 25%;
+	font-family: 'Raleway', sans-serif;
+	text-align: left;
+	display: block;
+
+}
+
+
+#formulario{
+	background: rgba(255, 255, 255, 0.3);
+	padding: 30px 40px 30px 40px;
+	border-radius: 15px;
+	height: auto;
+
+}
+
+input[type=text]{
+	width: 100%;
+	padding: 5px 5px;
+	margin: 8px 0;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+
+select{
+	width: 90px;
+	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+textarea{
+	width: 100%;
+	height: 100px;
+	padding: 5px 5px;
+	margin: 8px 0;
+		display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+input[name="reserva"]{
+width: 49%;
+  background-color: #87000f;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+input[name="contato"]{
+width: 20%;
+  background-color: #87000f;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+input[name="telefone"]{
+	width: 49%;
+ 	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+input[name="chegada"]{
+	width: 30%;
+ 	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+input[name="partida"]{
+	width: 30%;
+ 	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+small{
+	font-family: 'Raleway', sans-serif;
+	color: #87000f;
+	font-weight: bolder;
+	text-align: center;
+	color: red;
+
+
+}
+
+label{
+	padding-top: 10px;
+	display: block;
+}
+
+
+
+
+
+
+input[type="date"] {
+    position: relative;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="date"]:after {
+    content: "\25BC"; 
+    color: #555;
+    padding: 0 5px;
+}
+
+/* change color of symbol on hover */
+input[type="date"]:hover:after {
+    color: #bf1400;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+/* adjust increase/decrease button */
+input[type="date"]::-webkit-inner-spin-button {
+    z-index: 1;
+}
+
+ /* adjust clear button */
+ input[type="date"]::-webkit-clear-button {
+     z-index: 1;
+ }
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+ 
+
+#topo {
+background-image: url(../img/bg2.png);
+background-repeat: no-repeat;
+background-position: top center;
+background-size: cover;
+position: absolute;
+width: 100%;
+height: 85%;
+top:0px;
+left: 0px;
+animation: slide 15s infinite;
+
+}
+
+@keyframes slide{
+	0%{
+	background-image: url(../img/bg2.png);
+	}
+	50%{
+	background-image: url(../img/bg.png);
+	}
+}
+
+
+
+
+
+}
