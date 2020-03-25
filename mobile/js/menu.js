@@ -1,9 +1,7 @@
  
 document.getElementById('menu').innerHTML = 
-		
-		"<nav class='menu'>"+
-		"<div class='toggle'><div class='toggle2'><i class='fa fa-bars' aria-hidden='true'></i></div></div>"+
-		"	<ul>"+
+		"<nav class='navigation'>"+
+		"	<ul class='nav-menu'>"+
 		"		<li><a href='index.html' id='m1'>Início</a></li>"+
 		"		<li><a href='casa.html' id='m2' >Conheça a casa</a></li>"+
 		"		<li><a href='reservas.html' id='m3' > Reservas</a></li>"+
@@ -11,16 +9,14 @@ document.getElementById('menu').innerHTML =
 		"		<li><a href='regiao.html' id='m5' >Região dos Lagos</a></li>"+
 		"		<li><a href='contato.html' id='m6' >Fale Conosco</a></li>"+
 		"	</ul>"+
-		"	</nav>"
 
+			"<div class='nav-toggle'>"+
+"				<span class='icon-bar'></span>"+
+"		        <span class='icon-bar'></span>"+
+"		        <span class='icon-bar'></span>"+
+"			</div>"+
+"		</nav>"
 
-
-
-	$(document).ready(function(){
-		$('.toggle2').click(function(){
-				$('ul').toggleClass('active');
-			})
-})
 
 
  	var path = window.location.pathname;

@@ -1,0 +1,240 @@
+
+#corpo_meio{
+width: 100%;
+height: auto;
+position: absolute;
+left: 0px;
+top:90%;
+
+
+}
+
+#titulo1{
+    position: absolute;
+    top: 16%;
+    left: 0px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+
+}
+.titulo5{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+    color: brown;
+    font-size: 22px;
+}
+
+
+.titulo4{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: brown;
+    font-size: 30px;
+}
+
+
+#map{
+    background-image: url(../img/bg-map.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: fixed;
+    top:25%;
+    width: 790px;
+    height: 370px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding-bottom: 0;
+    
+}
+
+#map1{
+    position: absolute;
+    left: 19%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #D1E51F;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+#map1 img{
+    width: 30%;
+    padding-bottom: 1%;
+}
+
+
+#map2{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #D1E51F;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+#map2 img{
+    width: 35%;
+    padding-bottom: 1%;
+}
+
+
+#map3{
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 7px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #D1E51F;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+#map3 img{
+    width: 25%;
+    padding-bottom: 2%;
+}
+
+
+#map4{
+    position: absolute;
+    left: 57.5%;
+    top: 18%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #D1E51F;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+#map4 img{
+    width: 30%;
+    padding-bottom: 2%;
+}
+
+
+#map5{
+    position: absolute;
+    left: 70%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #D1E51F;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+#map5 img{
+    width: 30%;
+    padding-bottom: 1%;
+}
+
+
+#map6{
+    position: absolute;
+    left: 81%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #D1E51F;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+#map6 img{
+    width: 35%;
+    padding-bottom: 1%;
+}
+
+
+#map7{
+    position: absolute;
+    left: 79%;
+    top: 76%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #D1E51F;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+#map7 img{
+    width: 35%;
+    padding-bottom: 2%;
+}
+
+
+span{
+   color: black;
+   display: none;
+   text-align: center;
+   width: 100%;
+   height: 200px;
+   padding-bottom: 10%;
+    
+}
+
+#map_geral{
+    
+}
