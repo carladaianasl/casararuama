@@ -65,31 +65,52 @@
 
 		<?php
 
-		include("conecta.php"); $conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
+		$conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
 
-		$query ="insert into promocao_clientes (nome, email, mes, ano, comentario) values ('$nome','$email','$mes','$ano','$comentario')" ;
+		$query ="SELECT * FROM promocao_clientes WHERE (aparecer='0') " ;		
+		$result = mysqli_query ($conexao, $query) ;	
+		while($row = $result->fetch_row()) {
+		  $rows[]=$row;
+		}
 
-		mysqli_query ($conexao, $query) ;
+		$number = count($rows);
 
+		if ($number >= 3){
 
 		?>
 
 		<div id="box3">
 		<div class="titulo">Comentários de nossos hóspedes</div>	
 		<div class="box3">
-			<h2>"I'm baby pariatur tousled ramps ethical in minim. Fanny pack venmo sriracha fashion axe health goth cillum. Ramps consectetur try-hard asymmetrical master cleanse."</h2>
-			<h3>- Carla Carvalho | 20/05/2019</h3>
+			<h2>"<?php echo $rows[0][5]; ?>"</h2>
+			<h3><?php echo $rows[0][1]."  |  ".$rows[0][3]." / ".$rows[0][4]; ?></h3>
 		</div>
 
 		<div class="box3">
-			<h2>"I'm baby pariatur tousled ramps ethical in minim. Fanny pack venmo sriracha fashion axe health goth cillum. Ramps consectetur try-hard asymmetrical master cleanse."</h2>
-			<h3>- Carla Carvalho | 20/05/2019</h3>
+			<h2>"<?php echo $rows[1][5]; ?>"</h2>
+			<h3><?php echo $rows[1][1]."  |  ".$rows[1][3]." / ".$rows[1][4]; ?></h3>
 		</div>
 		<div class="box3">
-			<h2>"I'm baby pariatur tousled ramps ethical in minim. Fanny pack venmo sriracha fashion axe health goth cillum. Ramps consectetur try-hard asymmetrical master cleanse."</h2>
-			<h3>- Carla Carvalho | 20/05/2019</h3>
+			<h2>"<?php echo $rows[2][5]; ?>"</h2>
+			<h3><?php echo $rows[2][1]."  |  ".$rows[2][3]." / ".$rows[2][4]; ?></h3>
 		</div>
 		
+		<?php
+		} else {
+
+		?>
+
+
+		<div id="box3">
+		<div class="titulo">Comentários de nossos hóspedes <br/><br/>[...] <br/><br/></div>	
+		
+
+		<?php
+		}
+
+		?>
+
+
 
 		<div id="bottom"></div>
 		
