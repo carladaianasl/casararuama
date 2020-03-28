@@ -30,7 +30,7 @@ function verificar() {
 
 
 	var valido = true;
-	if(nome === "") {
+	if(nome === "" || nome.length <= "2") {
 		document.getElementById("nome").style.border = "1px solid #E30011";
 		document.getElementById("nome").style.boxShadow = "0px 0px 3px red";
 		valido = false
@@ -57,7 +57,7 @@ function verificar() {
   		document.getElementById("ano").style.border = "0px solid #E30011";
 	}
 
-	if(comentario === "") {
+	if(comentario === "" || comentario.length <= "5") {
 		document.getElementById("comentario").style.border = "1px solid #E30011";
 		document.getElementById("comentario").style.boxShadow = "0px 0px 3px red";
 		valido = false
@@ -66,7 +66,7 @@ function verificar() {
   		document.getElementById("comentario").style.border = "0px solid #E30011";
 	}
 
-	if(email === "") {
+	if(email ==="" || document.forms[0].email.value.indexOf('@')==-1 || document.forms[0].email.value.indexOf('.')==-1  || email.length <= "6") {
 		document.getElementById("email").style.border = "1px solid #E30011";
 		document.getElementById("email").style.boxShadow = "0px 0px 3px red";
 		valido = false
