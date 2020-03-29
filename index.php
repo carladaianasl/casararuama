@@ -13,15 +13,6 @@
 <script type="text/javascript">
 	
 
-	//if ($(window).width() <= 790) {
-   	//	window.location = "mobile/index.html";
-	//}
-	//else {
-
-	//    window.location = "desktop/index.php";
-	//}
-
-
 function sizeOfThings(){
   var windowWidth = window.innerWidth;
   var windowHeight = window.innerHeight;
@@ -42,9 +33,10 @@ function sizeOfThings(){
 
 };
 sizeOfThings();
-
 window.addEventListener('resize', function(){
 	sizeOfThings();
+
+
 });
 
 </script>

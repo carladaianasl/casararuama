@@ -23,6 +23,13 @@
 
 			<script type="text/javascript">
 				swal("Parabéns!", "Verifique seu e-mail e em até 24h você receberá um brinde.", "success");
+
+				window.setTimeout(function(){
+
+        	// Move to a new location or you can do something else
+        	window.location.href = "index.php";
+
+   			 }, 5000);
 			</script>
 
 			<?php
