@@ -1,4 +1,4 @@
-function enviar(){
+
 
 	document.getElementById('telefone').addEventListener('input', function (e) {
 
@@ -16,6 +16,7 @@ function enviar(){
   
 	});
 
+function enviar(){
 
 	document.getElementById('nome').addEventListener('input', function (n) {
 		validaNome();	  

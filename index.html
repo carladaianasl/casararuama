@@ -13,17 +13,41 @@
 <script type="text/javascript">
 	
 
-	if ($(window).width() <= 790) {
-   		window.location = "mobile/index.html";
-	}
-	else {
+	//if ($(window).width() <= 790) {
+   	//	window.location = "mobile/index.html";
+	//}
+	//else {
 
-	    window.location = "desktop/index.html";
-	}
+	//    window.location = "desktop/index.php";
+	//}
+
+
+function sizeOfThings(){
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+  
+  var screenWidth = screen.width;
+  var screenHeight = screen.height;
+  
+ // document.querySelector('.window-size').innerHTML = windowWidth + 'x' + windowHeight;
+ // document.querySelector('.screen-size').innerHTML = screenWidth + 'x' + screenHeight;
+
+  if  (screenWidth <= 790){
+  		
+  		window.location = "mobile/index.html";
+  }	else {
+
+  		window.location = "desktop/index.php";
+  }
+
+};
+sizeOfThings();
+
+window.addEventListener('resize', function(){
+	sizeOfThings();
+});
 
 </script>
-
-
 
 </body>
 </html>
