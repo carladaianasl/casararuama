@@ -64,7 +64,7 @@ ul li a{
 	letter-spacing: 1px;
 }
 
-a:hover{
+ul li a:hover{
 	background: rgba(255, 255, 255, 0.3);
 }
 
@@ -185,9 +185,9 @@ height: auto;
 }
 
 .button1:hover {
-background: linear-gradient(180deg, #F8F8F8, #F0F0F0);
+background: linear-gradient(180deg, #4b0008, #87000f);
 border: 2px solid #87000f;
-color: #87000f;
+color: white;
 font-weight: bolder;
 letter-spacing: 4px;
 }
