@@ -16,11 +16,13 @@ $obs = $_POST["obs"];
 $data_cheg = date("d/m/Y",strtotime($data_chegada));
 $data_part = date("d/m/Y",strtotime($data_partida));
 
+date_default_timezone_set('America/Sao_Paulo');
+$datahoje = date("Y-m-d");
 
 $resposta_email = $_POST["reserva_email"];
 $resposta_whatsapp = $_POST["reserva_whatsapp"];
 
-$query ="insert into reservas_site (nome, pessoas, pet, tel1, tel2, email, data_chegada, horario_chegada, data_saida, obs) values   ('$nome','$pessoas','$pet','$email','$tel','$tel1','$data_chegada','$horario_chegada','$data_partida','$obs')" ;
+$query ="insert into reservas_site (nome, pessoas, pet, tel1, tel2, email, data_chegada, horario_chegada, data_saida, data_recebida, obs) values   ('$nome','$pessoas','$pet','$email','$tel','$tel1','$data_chegada','$horario_chegada','$data_partida', '$datahoje','$obs')" ;
 
 mysqli_query ($conexao, $query) ;
 

@@ -16,6 +16,24 @@
   
 	});
 
+
+	document.getElementById('telefone1').addEventListener('input', function (e) {
+
+		var tel = document.getElementById('telefone1').value;
+		var x;
+		
+		if (tel.length>=15){
+			x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);  		
+	  	} else {
+			x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,4})(\d{0,4})/); 
+	  	}
+	  	e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+
+		validaTelefone();
+  
+	});
+
+
 function enviar(){
 
 	document.getElementById('nome').addEventListener('input', function (n) {
@@ -29,9 +47,9 @@ function enviar(){
 
 	
 	if (isValido()){
-		var nome = document.getElementById("nome");
-		var primeiro = nome.value.split(" ")[0]
-		alert('Obrigado Sr(a) ' + primeiro + '. Sua solitação foi enviada com sucesso e em até 24h entraremos em contato pelo telefone informado.')
+		//var nome = document.getElementById("nome");
+		//var primeiro = nome.value.split(" ")[0]
+		//alert('Obrigado Sr(a) ' + primeiro + '. Sua solitação foi enviada com sucesso e em até 24h entraremos em contato pelo telefone informado.')
 		
 		return true;
 	}
@@ -64,6 +82,7 @@ function isValido(){
 
 
 
+
 function validaNome(){
 	var nome = document.getElementById('nome').value
 
@@ -77,6 +96,7 @@ function validaNome(){
   	} else {
   		document.getElementById("nome").style.border = "";
 		document.getElementById("nome").style.boxShadow = "";
+		document.getElementById("resposta").innerHTML = "";
 		return true;
 	}
 }
@@ -96,10 +116,14 @@ function validaTelefone(){
   	} else {
   		document.getElementById("telefone").style.boxShadow = "0px 0px 3px blue";
   		document.getElementById("telefone").style.border = "0px solid #E30011";
- 
+  		document.getElementById("resposta").innerHTML = "";
 		return true;
 	}
 }
+
+
+
+
 
 
 function validaEmail(){
@@ -108,16 +132,15 @@ function validaEmail(){
 	if (email === ""){
   		document.getElementById("email").style.border = "1px solid #E30011";
 		document.getElementById("email").style.boxShadow = "0px 0px 3px red";
-		document.getElementById("email").innerHTML = "Por favor, preecha os campos demarcados !!";
+		document.getElementById("resposta").innerHTML = "Por favor, preecha os campos demarcados !!";
 		form.email.focus();
 		return false;
   	} else {
   		document.getElementById("email").style.boxShadow = "0px 0px 3px blue";
   		document.getElementById("email").style.border = "0px solid #E30011";
-  
+  		document.getElementById("resposta").innerHTML = "";
 		return true;
 	}
 }
-
 
 
