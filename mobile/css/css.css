@@ -191,43 +191,21 @@ left: 0px;
 }
 
 
-.titulo3{
-	position: absolute;
-	margin-top: 8%;
-	left: 50%;
-	transform: translateX(-50%);
-	text-align: center;
-	font-family: 'Raleway', sans-serif;
-    color: brown;
-    font-size: 30px;
-}
 
-
-#meio{
-	position: absolute;
-	left: 0px;
-	top: 30%;
-	width: 90%;
-	text-align: center;
-	padding-left: 5%;
-	padding-right: 5%;
-}
 
 
 
 
 #form-bg{
 	position: absolute;
+	width: 90%;
+	height: auto;
+	padding-left: 5%;
+	padding-right: 5%;
 	left: 0px;
-	top: 30%;
-	width: 50%;
-	padding-left: 25%;
-	padding-right: 25%;
-	font-family: 'Raleway', sans-serif;
-	text-align: left;
-	display: block;
-
+	
 }
+
 
 
 #formulario{
@@ -235,162 +213,12 @@ left: 0px;
 	padding: 30px 40px 30px 40px;
 	border-radius: 15px;
 	height: auto;
-
-}
-
-input[type=text]{
-	width: 100%;
-	padding: 5px 5px;
-	margin: 8px 0;
-	display: block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	text-align: left;
 
 }
 
 
-select{
-	width: 90px;
-	padding: 5px 5px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
-
-}
-
-textarea{
-	width: 100%;
-	height: 100px;
-	padding: 5px 5px;
-	margin: 8px 0;
-		display: block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
-
-}
-
-input[name="reserva"]{
-width: 49%;
-  background-color: #87000f;
-  color: white;
-  padding: 10px 10px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-}
-
-input[name="contato"]{
-width: 20%;
-  background-color: #87000f;
-  color: white;
-  padding: 10px 10px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-}
-
-input[name="telefone"]{
-	width: 49%;
- 	padding: 5px 5px;
-	margin: 8px 0;
-	display: inline;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
-}
-
-input[name="chegada"]{
-	width: 30%;
- 	padding: 5px 5px;
-	margin: 8px 0;
-	display: inline;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
-}
-
-
-input[name="partida"]{
-	width: 30%;
- 	padding: 5px 5px;
-	margin: 8px 0;
-	display: inline;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
-}
-
-small{
-	font-family: 'Raleway', sans-serif;
-	color: #87000f;
-	font-weight: bolder;
-	text-align: center;
-	color: red;
-
-
-}
-
-label{
-	padding-top: 10px;
-	display: block;
-}
-
-
-input[type="date"] {
-    position: relative;
-}
-
-/* create a new arrow, because we are going to mess up the native one
-see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
-input[type="date"]:after {
-    content: "\25BC"; 
-    color: #555;
-    padding: 0 5px;
-}
-
-/* change color of symbol on hover */
-input[type="date"]:hover:after {
-    color: #bf1400;
-}
-
-/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
-input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    height: auto;
-    color: transparent;
-    background: transparent;
-}
-
-/* adjust increase/decrease button */
-input[type="date"]::-webkit-inner-spin-button {
-    z-index: 1;
-}
-
- /* adjust clear button */
- input[type="date"]::-webkit-clear-button {
-     z-index: 1;
- }
 
 
 nav.navigation{
@@ -792,8 +620,194 @@ text-align: center;
 }
 
 
+.titulo3{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+    color: brown;
+    font-size: 30px;
+    padding-top: 15%;
+}
+
+input[type=text]{
+	width: 100%;
+	padding: 5px 5px;
+	margin: 8px 0;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+
+}
 
 
+select{
+	width: 100%;
+	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+	background-color: white;
+
+}
+
+textarea{
+	width: 100%;
+	height: 100px;
+	padding: 5px 5px;
+	margin: 8px 0;
+		display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+input[name="reserva"]{
+width: 100%;
+  background-color: #87000f;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+input[name="contato"]{
+width: 100%;
+  background-color: #87000f;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+input[name="telefone"]{
+	width: 100%;
+ 	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+input[name="chegada"]{
+	width: 100%;
+ 	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+input[name="partida"]{
+	width: 100%;
+ 	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+small{
+	font-family: 'Raleway', sans-serif;
+	color: #87000f;
+	font-weight: bolder;
+	text-align: center;
+	color: red;
+	font-size: 10px;
+
+
+}
+
+label{
+	padding-top: 10px;
+	display: block;
+}
+
+
+input[type="date"] {
+    position: relative;
+    background-color: white;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="date"]:after {
+    content: "\25BC"; 
+    color: #555;
+    padding: 0 5px;
+}
+
+/* change color of symbol on hover */
+input[type="date"]:hover:after {
+    color: #bf1400;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+/* adjust increase/decrease button */
+input[type="date"]::-webkit-inner-spin-button {
+    z-index: 1;
+}
+
+ /* adjust clear button */
+ input[type="date"]::-webkit-clear-button {
+     z-index: 1;
+ }
+
+#meio{
+	position: absolute;
+	left: 0px;
+	top: 16%;
+	width: 100%;
+	text-align: center;
+	
+}
+
+input[name="reserva_email"], input[name="reserva_whatsapp"]{
+width: 100%;
+  background-color: #87000f;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
 
 }
 
@@ -1070,6 +1084,198 @@ text-align: center;
 	top: 50%;
 	transform: translateY(-50%);
 	left: 35%;
+}
+
+.titulo3{
+	position: absolute;
+	margin-top: 8%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+    color: brown;
+    font-size: 30px;
+}
+
+
+input[type=text]{
+	width: 100%;
+	padding: 5px 5px;
+	margin: 8px 0;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+
+select{
+	width: 100%;
+	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+	background-color: white;
+
+}
+
+textarea{
+	width: 100%;
+	height: 100px;
+	padding: 5px 5px;
+	margin: 8px 0;
+		display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+input[name="reserva"]{
+width: 100%;
+  background-color: #87000f;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+input[name="contato"]{
+width: 100%;
+  background-color: #87000f;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+input[name="telefone"]{
+	width: 100%;
+ 	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+input[name="chegada"]{
+	width: 100%;
+ 	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+input[name="partida"]{
+	width: 100%;
+ 	padding: 5px 5px;
+	margin: 8px 0;
+	display: inline;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+small{
+	font-family: 'Raleway', sans-serif;
+	color: #87000f;
+	font-weight: bolder;
+	text-align: center;
+	color: red;
+	font-size: 10px;
+
+
+}
+
+label{
+	padding-top: 10px;
+	display: block;
+}
+
+
+input[type="date"] {
+    position: relative;
+    background-color: white;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="date"]:after {
+    content: "\25BC"; 
+    color: #555;
+    padding: 0 5px;
+}
+
+/* change color of symbol on hover */
+input[type="date"]:hover:after {
+    color: #bf1400;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+/* adjust increase/decrease button */
+input[type="date"]::-webkit-inner-spin-button {
+    z-index: 1;
+}
+
+ /* adjust clear button */
+ input[type="date"]::-webkit-clear-button {
+     z-index: 1;
+ }
+
+
+#meio{
+	position: absolute;
+	left: 0px;
+	top: 10%;
+	width: 100%;
+	text-align: center;
+	
+}
+
+input[name="reserva_email"], input[name="reserva_whatsapp"]{
+width: 49%;
+  background-color: #87000f;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
 }
 
 

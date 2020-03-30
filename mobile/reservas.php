@@ -6,10 +6,29 @@
 	<link rel="stylesheet" type="text/css" href="css/css.css" />
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:400,500|Raleway:400,700,800&display=swap" rel="stylesheet">
 	<script src="js/jquery.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	
 </head>
 <body>
+
+<?php 
+
+		
+		if(isset($_GET["r"]) and $_GET["r"] === "1"){		
+			?>
+
+			<script type="text/javascript">
+				swal("Solicitação enviada!", "Em até 24h entraremos em contato com você!", "success");
+			</script>
+
+			<?php
+
+
+			} 	
+				
+
+	?>
 
 <div id="topo2">
 	<div id="menu"></div>
@@ -23,7 +42,7 @@
 
 		<div id="formulario">
 		
-		<form name="form" action="">
+		<form name="form" action="envia_reserva.php" method="POST">
 
 		<small id='resposta'></small>
 
@@ -47,7 +66,7 @@
 		</select>
 
 		<label for="telefone">Telefones para contato *</label>
-		<input type="tel" id="telefone" name="telefone" maxlength="15" placeholder="(00) 00000-0000" />
+		<input type="text" id="telefone" name="telefone" maxlength="15" placeholder="(00) 00000-0000" />
 		<input type="text" id="telefone1" name="telefone" maxlength="15" placeholder="(00) 0000-0000"/>
 
 		<label for="email">Seu e-mail *</label>
@@ -80,8 +99,8 @@
 		<textarea id="obs" name="obs" placeholder="Se quiser adicionar detalhes, dúvidas e/ou pedidos"></textarea>
 		<br/>
 	
-		<input type="submit" onclick="return enviar();" value="Aguarde nossa ligação" name="reserva"/>
-		<input type="submit" value="Solitação por WhatsApp" name="reserva"/>
+		<input type="submit" onclick="return enviar();" value="Aguarde nossa ligação" name="reserva_email"/>
+		<input type="submit" value="Solitação por WhatsApp" name="reserva_whatsapp" onclick="return enviar();"/>
 	</form>
 	</div>
 	
