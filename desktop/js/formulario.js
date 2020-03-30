@@ -38,6 +38,10 @@ function enviar(){
 		validaNome();	  
 	});
 
+	document.getElementById('cpf').addEventListener('input', function (n) {
+		validaCPF();	  
+	});
+
 	document.getElementById('pessoas').addEventListener('input', function (n) {
 		validaPessoas();	  
 	});
@@ -94,6 +98,10 @@ function isValido(){
 		valido = false;
 	}
 
+	if(validaCPF() == false){
+		valido = false;
+	}
+
 	if(validaNome() == false ){
 		valido = false;
 	} 
@@ -121,6 +129,34 @@ function validaNome(){
 		return true;
 	}
 }
+
+
+
+function validaCPF(){
+	var cpf = document.getElementById('cpf').value
+
+
+	if(cpf === "") {
+		document.getElementById("cpf").style.border = "1px solid #E30011";
+		document.getElementById("cpf").style.boxShadow = "0px 0px 3px red";
+		document.getElementById("resposta").innerHTML = "Por favor, preecha os campos demarcados !!";
+		form.cpf.focus();
+
+		return false;
+  	} else {
+  		document.getElementById("cpf").style.border = "";
+		document.getElementById("cpf").style.boxShadow = "";
+		document.getElementById("resposta").innerHTML = "";
+		return true;
+	}
+}
+
+
+
+
+
+
+
 
 
 function validaPessoas(){
