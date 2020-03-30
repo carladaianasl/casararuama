@@ -40,7 +40,7 @@
 <div id="box2">
 
 		<div class="box2">
-			<img src="img/pet.png">
+			<img src="img/pett.png">
 			<p>PET FRIENDLY</p>
 			<h1>Seus animais são muito bem vindos em sua estadia. Sabemos o quanto é difícil ficar sem a companhia deles, pois eles são parte da família e merecem total carinho e atenção! <br/><br/><b>Não cobramos taxas sobre pets.</b> </h1>
 		</div>
