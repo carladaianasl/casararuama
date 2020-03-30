@@ -592,6 +592,7 @@ span.icon-bar{
 	padding-top: 5%;
 	margin: 0 auto;
 	width: 90%;
+
 	
 }
 
@@ -824,13 +825,14 @@ text-align: center;
 
 
 @media screen and (min-width:768px){
-		ul.nav-menu{
+	ul.nav-menu{
 		position:absolute;
 		top:50px;
 		width:100%;
 		height:0;
 		padding:0;
 		overflow:hidden;
+
 	}
 	ul.nav-menu.active{
 		height:auto;
@@ -839,10 +841,12 @@ text-align: center;
 		width:100%;
 	}
 	ul.nav-menu li a{
-		width:100%;
-		padding:0;
-		text-align:center;
-		background-color:#2c2c2c;
+		width:40%;
+		padding:10px;
+		float: right;
+		text-align:right;
+		padding-right: 10%;
+		background-color: rgb(255,255,255, 0.98);
 	}
 	ul.nav-menu li a:hover{
 		background-color:#1c1c1c;
@@ -851,18 +855,24 @@ text-align: center;
 		display:block;
 	}
 
+	#logo{
+	margin: 0 auto;
+	text-align: left;
+	}
 
 	.logo img{
 	
 	width: 60%;
 	height: auto;
 
+
 	}
 
 	#box1{
-	position: absolute;
-	top: 15%;
-	left: 5%;
+	
+	text-align: center;
+	padding-top: 5%;
+	margin: 0 auto;
 	width: 90%;
 
 	}
@@ -874,6 +884,7 @@ text-align: center;
 	padding-bottom: 10px;
 	padding-top: 20px;
 	font-family: 'Raleway', sans-serif;
+	text-align: left;
 
 }
 .texto2{
@@ -881,16 +892,15 @@ text-align: center;
 	font-family: arial;
 	padding-bottom: 30px;
 	font-family: 'Raleway', sans-serif;
+	text-align: left;
 }
 .texto3{
 	font-size: 16px;
 	font-family: arial;
-	padding-top: 20px;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	padding-top: 2%;
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
+	padding-bottom: 3%
 
 
 }
@@ -934,18 +944,18 @@ letter-spacing: 4px;
 	width: 100%;
 	height: auto;
 	position: absolute;
-	left: 0px;
-	top: 85%;
+	top: auto;
 	text-align: center;
+	
 	
 }
 
 .box2 {
 display:block;
 width: 50%;
-height: auto;
+height: 300px;
 float: left;
-padding: 40px 0px 30px 0px;
+padding: 2% 0px 2% 0px;
 text-align: center;
 
 }
@@ -953,7 +963,7 @@ text-align: center;
 
 
 #box2 img{
-	width: 20%;
+	width: 25%;
 	padding-top: 20px;
 }
 
@@ -984,17 +994,17 @@ text-align: center;
 	font-family: 'Raleway', sans-serif;
     font-weight: regular;
     color: brown;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
 
 
 .b1{
-	width: 30%;
+	width: 50%;
 	height: auto;
-	float: right;
-	padding: 20px 0 10px 6%;
+	float: left;
+	padding: 20px 0 10px 3%;
 
 }
 
@@ -1036,7 +1046,7 @@ text-align: center;
 	right: 0px;
 	float: right;
 	text-align: center;
-	width: 10%;
+	width: 15%;
 
 }
 .b3{

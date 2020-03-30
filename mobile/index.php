@@ -78,7 +78,7 @@
 
 		$number = count($rows);
 
-		if ($number >= 3){
+		if ($number >= 2){
 
 		?>
 
@@ -92,10 +92,6 @@
 		<div class="box3">
 			<h2>"<?php echo $rows[1][5]; ?>"</h2>
 			<h3><?php echo $rows[1][1]."  |  ".$rows[1][3]." / ".$rows[1][4]; ?></h3>
-		</div>
-		<div class="box3">
-			<h2>"<?php echo $rows[2][5]; ?>"</h2>
-			<h3><?php echo $rows[2][1]."  |  ".$rows[2][3]." / ".$rows[2][4]; ?></h3>
 		</div>
 		
 		<?php
