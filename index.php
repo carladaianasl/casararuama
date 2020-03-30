@@ -23,7 +23,7 @@ function sizeOfThings(){
  // document.querySelector('.window-size').innerHTML = windowWidth + 'x' + windowHeight;
  // document.querySelector('.screen-size').innerHTML = screenWidth + 'x' + screenHeight;
 
-  if  (screenWidth <= 790){
+  if  (screenWidth <= 800){
   		
   		window.location = "mobile/index.php";
   }	else {

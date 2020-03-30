@@ -4,7 +4,7 @@ width: 100%;
 height: auto;
 position: absolute;
 left: 0px;
-top:18%;
+top:10%;
 
 }
 
@@ -13,9 +13,16 @@ top:18%;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
     color: brown;
-    font-size: 30px;
+    font-size: 26px;
+    padding-left: 5%;
+    width: 90%;
+    padding-bottom: 3%
+
 }
 
+h4{
+    text-align: justify;
+}
 
 #images-section {
     display: flex;
