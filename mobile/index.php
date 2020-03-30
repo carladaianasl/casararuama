@@ -30,7 +30,7 @@
 				<div class="texto2">
 					Conheça nosso espaço!
 				</div>
-				<div class="button button1"><a href="reservas.php" style="text-decoration: none; color:white;">RESERVE AGORA</a></div>
+				<a href="reservas.php" style="text-decoration: none; color:white;"><div class="button button1">RESERVE AGORA</div></a>
 		<div class="texto3"><a href="casa.html" style="text-decoration: none; color: black;">SAIBA MAIS</a></div>
 		</div>
 
