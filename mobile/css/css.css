@@ -810,6 +810,11 @@ width: 100%;
   font-size: 16px;
 }
 
+.subtitulo{
+	padding-top: 20%;
+}
+
+
 }
 
 
@@ -1277,6 +1282,13 @@ width: 49%;
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
+}
+
+.subtitulo{
+	padding-top: 10%;
+	padding-bottom: 18%;
+	height: auto;
+	width: 100%;
 }
 
 
