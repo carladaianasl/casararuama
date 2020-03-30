@@ -29,7 +29,7 @@
         	// Move to a new location or you can do something else
         	window.location.href = "index.php";
 
-   			 }, 5000);
+   			 }, 3000);
 			</script>
 
 			<?php

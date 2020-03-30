@@ -9,25 +9,14 @@ document.getElementById('bottom').innerHTML =
 
 "		<div>"+
 "			<div id='b2'>"+
-"				<img src='img/fb.png'>"+
-"				<img src='img/fb.png'>"+
-"				<img src='img/fb.png'>"+
+"				<a href='https://wa.me/5522991044764'><img src='img/whats.png'></a>"+
+"				<a href='https://www.instagram.com/casalagoararuama/'><img src='img/insta.png'></a>"+
+"				<a href='https://www.facebook.com/casaemararuama'><img src='img/face.png'></a>"+
 "			</div>"+
 "			<div id='b2texto'>"+
 "				Copyright © 2010 | Developed by Carla Carvalho"+
 "			</div>"+
 "		</div>"+
 
-"			<div id='b4'><div class='b4'></div></div>"+
-"			<div class='b3'>"+
-"				<h4>"+
-"				conheça a casa</br>"+
-"				nossas tarifas</br>"+
-"				faça sua reserva</br>"+
-"				nossas promoções</br>"+
-"				fale conosco</br>"+
-"				</h4>"+
-
-"			</div>"+
 "</div>"
  
