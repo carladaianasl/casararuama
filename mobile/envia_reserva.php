@@ -3,6 +3,7 @@
 $conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
 
 $nome = $_POST["nome"];
+$rg = $_POST["rg"];
 $cpf = $_POST["cpf"];
 $pessoas = $_POST["pessoas"];
 $pet = $_POST["pet"];
@@ -23,7 +24,8 @@ $datahoje = date("Y-m-d");
 $resposta_email = $_POST["reserva_email"];
 $resposta_whatsapp = $_POST["reserva_whatsapp"];
 
-$query ="insert into reservas_site (nome, cpf, pessoas, pet, tel1, tel2, email, data_chegada, horario_chegada, data_saida, data_recebida, obs) values   ('$nome','$cpf','$pessoas','$pet','$email','$tel','$tel1','$data_chegada','$horario_chegada','$data_partida', '$datahoje','$obs')" ;
+$query ="insert into reservas_site (nome, rg, cpf, pessoas, pet, tel1, tel2, email, data_chegada, horario_chegada, data_saida, data_recebida, obs) values   ('$nome','$rg','$cpf','$pessoas','$pet','$email','$tel','$tel1','$data_chegada','$horario_chegada','$data_partida', '$datahoje','$obs')" ;
+
 
 mysqli_query ($conexao, $query) ;
 

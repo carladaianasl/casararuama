@@ -38,6 +38,10 @@ function enviar(){
 		validaNome();	  
 	});
 
+	document.getElementById('rg').addEventListener('input', function (n) {
+		validaRG();	  
+	});
+
 	document.getElementById('cpf').addEventListener('input', function (n) {
 		validaCPF();	  
 	});
@@ -102,6 +106,10 @@ function isValido(){
 		valido = false;
 	}
 
+	if(validaRG() == false){
+		valido = false;
+	}
+
 	if(validaNome() == false ){
 		valido = false;
 	} 
@@ -131,17 +139,70 @@ function validaNome(){
 }
 
 
+function validaRG(){
+	var rg = document.getElementById('rg').value
+
+	if(rg === "" || rg.length <= 10) {
+		document.getElementById("rg").style.border = "1px solid #E30011";
+		document.getElementById("rg").style.boxShadow = "0px 0px 3px red";
+		document.getElementById("resposta").innerHTML = "Por favor, preecha os campos demarcados !!";
+		form.rg.focus();
+
+		return false;
+  	} else {
+  		document.getElementById("rg").style.border = "";
+		document.getElementById("rg").style.boxShadow = "";
+		document.getElementById("resposta").innerHTML = "";
+		return true;
+	}
+}
+
+
+function TestaCPF(strCPF) {
+    var Soma;
+    var Resto;
+    Soma = 0;
+	if (strCPF == "00000000000" 
+		|| strCPF == "11111111111"
+		|| strCPF == "22222222222"
+		|| strCPF == "33333333333"
+		|| strCPF == "44444444444"
+		|| strCPF == "55555555555"
+		|| strCPF == "66666666666"
+		|| strCPF == "77777777777"
+		|| strCPF == "88888888888"
+		|| strCPF == "99999999999")
+
+		return false;	 
+
+	for (i=1; i<=9; i++) 
+		Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+	Resto = (Soma * 10) % 11;
+	if ((Resto == 10) || (Resto == 11))  
+		Resto = 0;
+	if (Resto != parseInt(strCPF.substring(9, 10)) ) 
+		return false;	   
+	Soma = 0;
+    for (i = 1; i <= 10; i++) 
+    	Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+    Resto = (Soma * 10) % 11;   
+    if ((Resto == 10) || (Resto == 11))  
+    	Resto = 0;
+    if (Resto != parseInt(strCPF.substring(10, 11) ) ) 
+    	return false;
+    return true;
+}
 
 function validaCPF(){
-	var cpf = document.getElementById('cpf').value
+	var cpf = document.getElementById('cpf').value;
+	x=cpf.replace(/-/g, '').replace(/\./g, '');
+	console.log(TestaCPF(x));
 
-
-	if(cpf === "") {
+	if(TestaCPF(x) === false) {
 		document.getElementById("cpf").style.border = "1px solid #E30011";
 		document.getElementById("cpf").style.boxShadow = "0px 0px 3px red";
 		document.getElementById("resposta").innerHTML = "Por favor, preecha os campos demarcados !!";
 		form.cpf.focus();
-
 		return false;
   	} else {
   		document.getElementById("cpf").style.border = "";

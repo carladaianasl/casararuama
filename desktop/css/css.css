@@ -512,7 +512,7 @@ width: 20%;
 
 
 
-input[name="cpf"]{
+input[name="cpf"], input[name="rg"]{
 	width: auto;
  	padding: 5px 5px;
 	margin: 8px 0;

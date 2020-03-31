@@ -69,7 +69,7 @@
 	<div class="subtitulo">
 
 		<h2>Para mais informações</h2>
-		<h2><b>(22) 2222-2222 | casa@gmail.com.br</b></h2>
+		<h2><b>(22) 99104-4764 | casararuama7@gmail.com</b></h2>
 
 
 	</div>

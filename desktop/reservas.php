@@ -52,6 +52,15 @@
 				cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
 				return cpf
 			}
+
+			function mRG(rg){
+				rg=rg.replace(/\D/g,"")
+				rg=rg.replace(/(\d{2})(\d)/,"$1.$2")
+				rg=rg.replace(/(\d{3})(\d)/,"$1.$2")
+				rg=rg.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+				return rg
+			}
+
 			function mCEP(cep){
 				cep=cep.replace(/\D/g,"")
 				cep=cep.replace(/^(\d{2})(\d)/,"$1.$2")
@@ -104,11 +113,12 @@
 
 		<label for="nome">Seu nome *</label> 
 		<input type="text" id="nome" name="nome"/>		
+		
+		<label for="rg">RG*</label> 
+		<input type="text" id="rg" name="rg" onkeydown="fMasc( this, mRG );" maxlength="11" placeholder="00.000.000-0"/>	
 
-		<label for="cpf">CPF *</label> 
-		<input type="text" id="cpf" name="cpf" onkeydown="javascript: fMasc( this, mCPF );" maxlength="14" placeholder="000.000.000-00"/>		
-		
-		
+		<label for="cpf">CPF*</label> 
+		<input type="text" id="cpf" name="cpf" onkeydown="fMasc( this, mCPF );" maxlength="14" placeholder="000.000.000-00"/>	
 
 		<label for="pessoas">Quantas pessoas ficarão hospedadas? *</label>
 		<select type="text" id="pessoas" name="pessoas">

@@ -643,7 +643,7 @@ input[type=text]{
 
 }
 
-input[name="cpf"]{
+input[name="cpf"], input[name="rg"]{
 	width: 100%;
  	padding: 5px 5px;
 	margin: 8px 0;
@@ -653,6 +653,7 @@ input[name="cpf"]{
 	box-sizing: border-box;
 	font-family: 'Raleway', sans-serif;
 }
+
 
 select{
 	width: 100%;
@@ -1224,7 +1225,7 @@ small{
 
 }
 
-input[name="cpf"]{
+input[name="cpf"], input[name="rg"]{
 	width: auto;
  	padding: 5px 5px;
 	margin: 8px 0;
