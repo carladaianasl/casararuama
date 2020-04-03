@@ -3,6 +3,7 @@ body{
 	top: 0px;
 	left: 0px;
 	background-color: #ecf0f5;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #wrap{
@@ -40,7 +41,7 @@ body{
 	overflow: hidden;
 	display: block;
 	color: white;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	
 }
 
@@ -87,7 +88,8 @@ body{
 	overflow: hidden;
 	background-color: #3c8dbc;
 	color: white;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	
 	box-shadow: 0 1px 1px #123144;
 }
 
@@ -137,7 +139,7 @@ padding: 14px 0px 14px 0px;
 	height: auto;
 	display: block;
 	text-align: center;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	position: absolute;
 	left: 250px;
 	position: absolute;
@@ -151,7 +153,7 @@ padding: 30px;
 }
 
 .box-interno{
-	width: 180px;
+	width: 230px;
 	height: 150px;
 	text-decoration: none;
 	background-color: rgb(32, 81, 109, 0.1);
@@ -168,7 +170,7 @@ padding: 30px;
 
 h1{
 	padding: 0 5% 0 5%;
-	font-family: arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 40px;
 }
 
@@ -196,6 +198,46 @@ h3{
 
 
 
+
+
+button[name="done"]{
+	background-color: #367fa9;
+	color: white;
+	padding: 10px;
+	border: 0px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+button[name="wait"]{
+	background-color: #173C52;
+	color: white;
+	padding: 10px;
+	border: 0px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+button[name="exit"]{
+	background-color: darkred;
+	color: white;
+	padding: 10px;
+	border: 0px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+button[name="exit"]:hover{
+	background-color: red;
+}
+
+button[name="wait"]:hover{
+	background-color: #367fa9;
+}
+
+button[name="done"]:hover{
+	background-color: #4098cb;
+}
 
 
 
@@ -240,8 +282,52 @@ h3{
 
 #opcoes button{
 	padding: 1%;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
+
+.line{
+	display: block;
+	width: 100%;
+	padding: 0 0 1% 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.line2{
+	display: block;
+	width: 100%;
+	padding: 0 0 1% 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bolder;
+}
+
+.line3{
+	display: block;
+	width: 100%;
+	padding: 0 0 1% 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
+}
+
+
+.t1{
+	display: block;
+	padding: 5px;
+	width: 100%;
+	text-align: left;
+		font-family: 'Open Sans', sans-serif;
+}
+
+textarea{
+	height: 100px;
+}
+
+#box-reserva-form{
+width: 81%;
+text-align: center;
+margin-left: 10%;
+}
+
+
 
 
 @media screen and (max-width: 600px){

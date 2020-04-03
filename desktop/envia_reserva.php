@@ -24,7 +24,7 @@ $datahoje = date("Y-m-d");
 $resposta_email = $_POST["reserva_email"];
 $resposta_whatsapp = $_POST["reserva_whatsapp"];
 
-$query ="insert into reservas_site (nome, rg, cpf, pessoas, pet, tel1, tel2, email, data_chegada, horario_chegada, data_saida, data_recebida, obs) values   ('$nome','$rg','$cpf','$pessoas','$pet','$email','$tel','$tel1','$data_chegada','$horario_chegada','$data_partida', '$datahoje','$obs')" ;
+$query ="insert into reservas_site (nome, rg, cpf, pessoas, pet, tel1, tel2, email, data_chegada, horario_chegada, data_saida, data_recebida, obs) values   ('$nome','$rg','$cpf','$pessoas','$pet','$tel','$tel1','$email','$data_chegada','$horario_chegada','$data_partida', '$datahoje','$obs')" ;
 
 mysqli_query ($conexao, $query) ;
 

@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:400,500|Raleway:400,700,800&display=swap" rel="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 
@@ -22,6 +25,14 @@
         });
     });
 
+
+$(function(){
+        $(".btn-toggle2").click(function(e){
+            e.preventDefault();
+            el = $(this).data('element');
+            $(el).toggle();
+        });
+    });
 </script>
 
 <?php
@@ -47,9 +58,37 @@ $conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
     $result = mysqli_query ($conexao, $query);    
     $comentarios_site=mysqli_num_rows($result);
 
+    
+
+if($_GET != null){
+    $r = $_GET["r"];
+    $id = $_GET["id"];
+
+    if ($r == 1){
+
+      
+      $query ="UPDATE reservas_site SET status='1' WHERE id='$id'";;  
+      mysqli_query ($conexao, $query);    
+
+    }
+    if ($r == 2){
+
+          
+      $query ="UPDATE reservas_site SET status='2' WHERE id='$id'";;  
+      mysqli_query ($conexao, $query);    
 
 
+    }
 
+    if ($r == 3){
+
+          
+      $query ="UPDATE reservas_site SET status='3' WHERE id='$id'";;  
+      mysqli_query ($conexao, $query);    
+
+    }
+
+}
 ?>
 
 <div id="menu-vertical">
@@ -59,14 +98,14 @@ $conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
                 <li><a href="entrou.php" class="active">Home</a></li>
                 <li><a href="entrou-reserva.php">Pré-reservas</a></li>
                 <li><a href="entrou-opiniao.php">Comentários</a></li>
-                <li><a href="entrou-opiniao.php">Mensagens</a></li>
+                <li><a href="entrou-faleconosco.php">Mensagens</a></li>
 
                 <li><div class="mod"></div></li>
-                <li><a href="entrou.php" class="active">Editar - Home</a></li>
-                <li><a href="entrou-reserva.php">Editar - Inf. Casa</a></li>
-                <li><a href="entrou-opiniao.php">Editar - Tarifas</a></li>
+                <li><a href="home-edit.php" class="active">Editar - Home</a></li>
+                <li><a href="casa-edit.php">Editar - Inf. Casa</a></li>
+                <li><a href="tarifa-edit.php">Editar - Tarifas</a></li>
                 <li><div class="mod"></div></li>
-                <li><a href="entrou-opiniao.php">Logout</a></li>
+                <li><a href="admin.php">Logout</a></li>
 
             </ul>
         </nav>
@@ -127,11 +166,24 @@ $conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
                
                 
                 <div  id="minhaDiv<?php echo $i; ?>" class="minhaDiv">
-                  DEMAIS DADOS
-                
+                    
+                    <div class="line">RG: <?php echo $row[2]; ?></div>
+                    <div class="line">CPF: <?php echo $row[3]; ?></div>
+                    <div class="line">Nº de hóspedes: <?php echo $row[4]; ?></div>
+                    <div class="line">PET: <?php echo $row[5]; ?></div>
+                    <div class="line">Tel: <?php echo $row[6]." | ".$row[7]; ?></div>
+                    <div class="line">E-mail: <?php echo $row[8]; ?></div>
+                    <div class="line2">Check-in: <?php echo date("d/m/Y", strtotime($row[9]))." às ".$row[10]; ?></div>
+                    <div class="line2">Check-Out: <?php echo date("d/m/Y", strtotime($row[11])); ?></div>
+                    <div class="line">OBS: <?php echo $row[13]; ?></div>
+                    <p>
+                    <div class="line3">Data da solicitação da pré-reserva no site: <?php echo date("d/m/Y", strtotime($row[12])) ?></div>
+
                     <div class="minhaDivbutton"> 
-                    <button type="button">Reserva cancelada</button>
-                    <button type="button">Reserva concluída</button>
+                    <a href="entrou-reserva.php?r=3&id=<?php echo $row[0]; ?>"><button type="button" name="exit">Cancelar</button></a>
+                     <a href="entrou-reserva.php?r=1&id=<?php echo $row[0]; ?>"><button type="button" name="wait">Pendência de pagamento</button></a>
+                    <a href="entrou-reserva.php?r=2&id=<?php echo $row[0]; ?>"><button type="button" name="done">Concluir</button></a>
+                   
                     </div>
                 </div>
             </div>
@@ -170,19 +222,30 @@ $conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
             <div id="box-reserva">
                 <div class="minhaDiv0"> Check-in: <?php echo date("d/m/Y", strtotime($datacheckin)); ?> | Nome do Cliente:  <?php echo $row[1]; ?>
                   <div class="minhaDivbutton"> 
-                    <button type="button" class="btn-toggle" data-element="#minhaDiv<?php echo $i; ?>">Mostrar</button>
+                    <button type="button" class="btn-toggle2" data-element="#segundaDiv<?php echo $i; ?>">Mostrar</button>
                     <button type="button">Ligar</button>
                     <button type="button">Whatsapp</button>
                   </div>
                 </div> 
                
                 
-                <div  id="minhaDiv<?php echo $i; ?>" class="minhaDiv">
-                  DEMAIS DADOS
+                <div  id="segundaDiv<?php echo $i; ?>" class="minhaDiv">
+                    
+                    <div class="line">RG: <?php echo $row[2]; ?></div>
+                    <div class="line">CPF: <?php echo $row[3]; ?></div>
+                    <div class="line">Nº de hóspedes: <?php echo $row[4]; ?></div>
+                    <div class="line">PET: <?php echo $row[5]; ?></div>
+                    <div class="line">Tel: <?php echo $row[6]." | ".$row[7]; ?></div>
+                    <div class="line">E-mail: <?php echo $row[8]; ?></div>
+                    <div class="line2">Check-in: <?php echo date("d/m/Y", strtotime($row[9]))." às ".$row[10]; ?></div>
+                    <div class="line2">Check-Out: <?php echo date("d/m/Y", strtotime($row[11])); ?></div>
+                    <div class="line">OBS: <?php echo $row[13]; ?></div>
+                    <p>
+                    <div class="line3">Data da solicitação da pré-reserva no site: <?php echo date("d/m/Y", strtotime($row[12])) ?></div>
                 
-                    <div class="minhaDivbutton"> 
-                    <button type="button">Reserva cancelada</button>
-                    <button type="button">Reserva concluída</button>
+                  <div class="minhaDivbutton"> 
+                    <a href="entrou-reserva.php?r=3&id=<?php echo $row[0]; ?>"><button type="button" name="exit">Cancelar</button></a>
+                    <a href="entrou-reserva.php?r=2&id=<?php echo $row[0]; ?>"><button type="button" name="done">Concluir</button></a>
                     </div>
                 </div>
             </div>
@@ -196,8 +259,10 @@ $conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
 
 
             <div id="opcoes">
+              <BR/><BR/>
               <a href="entrou-reserva-concluida.php"><button value="concluida"> Reservas concluídas </button></a>
               <a href="entrou-reserva-cancelada.php"><button value="cancelada"> Pré-reservas canceladas </button></a>
+              <BR/><BR/>
             </div>
 
 

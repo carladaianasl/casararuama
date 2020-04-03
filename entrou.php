@@ -5,6 +5,8 @@
 	<title>ADMIN</title>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:400,500|Raleway:400,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 
   <link rel="stylesheet" type="text/css" href="css-admin.css" />
 
@@ -37,7 +39,7 @@ $senha = $_GET["s"];
     $reservas_site=mysqli_num_rows($result);
 
 
-    $query ="SELECT * FROM contato_site WHERE (status=0) ";   
+    $query ="SELECT * FROM contato_site WHERE (status=1) ";   
 
     $result = mysqli_query ($conexao, $query);    
     $mensagens_site=mysqli_num_rows($result);
@@ -60,14 +62,14 @@ $senha = $_GET["s"];
                 <li><a href="entrou.php" class="active">Home</a></li>
                 <li><a href="entrou-reserva.php">Pré-reservas</a></li>
                 <li><a href="entrou-opiniao.php">Comentários</a></li>
-                <li><a href="entrou-opiniao.php">Mensagens</a></li>
+                <li><a href="entrou-faleconosco.php">Mensagens</a></li>
 
                 <li><div class="mod"></div></li>
-                <li><a href="entrou.php" class="active">Editar - Home</a></li>
-                <li><a href="entrou-reserva.php">Editar - Inf. Casa</a></li>
-                <li><a href="entrou-opiniao.php">Editar - Tarifas</a></li>
+                <li><a href="home-edit.php" class="active">Editar - Home</a></li>
+                <li><a href="casa-edit.php">Editar - Inf. Casa</a></li>
+                <li><a href="tarifa-edit.php">Editar - Tarifas</a></li>
                 <li><div class="mod"></div></li>
-                <li><a href="entrou-opiniao.php">Logout</a></li>
+                <li><a href="admin.php">Logout</a></li>
 
             </ul>
         </nav>
@@ -83,18 +85,22 @@ $senha = $_GET["s"];
                 <li><a href="entrou.php" class="active">Home</a></li>
                 <li><a href="entrou-reserva.php">Pré-reservas</a></li>
                 <li><a href="entrou-opiniao.php">Opiniões</a></li>
-                <li><a href="entrou-mensagem.php">Mensagens</a></li>
+                <li><a href="entrou-faleconosco.php">Mensagens</a></li>
                 <li class="right"><a href="admin.php">Logout</a></li>
             </ul>
         </nav>
     </div>
-
     
 
 
     <div id="geral">
 
     
+
+      <div class="side">
+      <h5>- RESUMO -</h5>
+      </div>
+      
 
       <div class="box">
         <a href="entrou-reserva.php">  
@@ -106,33 +112,22 @@ $senha = $_GET["s"];
 
 
         <div class="box">
-        <a href="entrou-reserva.php">  
+        <a href="entrou-faleconosco.php">  
         <div class="box-interno">
-          <h1><?php echo $reservas_site; ?></h1><h3> Novas pré-reservas</h3>
+          <h1><?php echo $mensagens_site; ?></h1><h3> Novas mensagens</h3>
         </div>
         </a>
       </div>
      
        <div class="box">
-        <a href="entrou-reserva.php">  
+        <a href="entrou-opiniao.php">  
         <div class="box-interno">
-          <h1><?php echo $reservas_site; ?></h1><h3> Novas pré-reservas</h3>
+          <h1><?php echo $comentarios_site; ?></h1><h3> Novos comentários</h3>
         </div>
         </a>
       </div>
 
-      <div class="box">
-        <a href="entrou-reserva.php">  
-        <div class="box-interno">
-          <h1><?php echo $reservas_site; ?></h1><h3> Novas pré-reservas</h3>
-        </div>
-        </a>
-      </div>
 
-      <div class="side">
-      <h5>x acessos</h5>
-      
-    </div>
 
 
 

@@ -67,7 +67,7 @@
 
 		$conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
 
-		$query ="SELECT * FROM promocao_clientes WHERE (aparecer='0') " ;		
+		$query ="SELECT * FROM promocao_clientes WHERE (aparecer='1') " ;		
 		$result = mysqli_query ($conexao, $query) ;	
 		while($row = $result->fetch_row()) {
 		  $rows[]=$row;
@@ -75,7 +75,7 @@
 
 		$number = count($rows);
 
-		if ($number >= 3){
+		if ($number == 3){
 
 		?>
 

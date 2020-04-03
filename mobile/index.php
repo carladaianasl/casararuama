@@ -25,10 +25,26 @@
 				
 
 				<div class="texto1">
-					Está precisando de um local para curtir suas férias?
+					<?php 
+
+					$conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
+  
+					  $query ="SELECT * FROM textos WHERE (status=1) ";   
+					  $result = mysqli_query ($conexao, $query); 
+					  $num_rows = mysqli_num_rows($result);
+					    
+					  $i="0";
+					    while ($i < $num_rows) { 
+					      $row = $result->fetch_row(); 
+					      $texto[] = $row[1]; 
+					      $i++;
+					  }
+
+					  echo $texto[0];
+					?>
 				</div>
 				<div class="texto2">
-					Conheça nosso espaço!
+					<?php echo $texto[1]; ?>
 				</div>
 				<a href="reservas.php" style="text-decoration: none; color:white;"><div class="button button1">RESERVE AGORA</div></a>
 		<div class="texto3"><a href="casa.html" style="text-decoration: none; color: black;">SAIBA MAIS</a></div>
@@ -41,27 +57,28 @@
 
 		<div class="box2">
 			<img src="img/pett.png">
-			<p>PET FRIENDLY</p>
-			<h1>Seus animais são muito bem vindos em sua estadia. Sabemos o quanto é difícil ficar sem a companhia deles, pois eles são parte da família e merecem total carinho e atenção! <br/><br/><b>Não cobramos taxas sobre pets.</b> </h1>
+			<p> <?php echo $texto[2]; ?></p>
+			<h1> <?php echo $texto[3]; ?> </h1>
 		</div>
 
 		<div class="box2">
 			<img src="img/local.png">
-			<p>LOCALIZAÇÃO</p>
-			<h1>Casa em ótima localização - em condomínio fechado - a 5 minutos do centro da cidade de carro. Bairro tranquilo com ruas asfaltadas. Além disso, é excelente para a prática de esportes ao ar livre.
+			<p>	<?php echo $texto[4]; ?>
+</p>
+			<h1><?php echo $texto[5]; ?>
  		</h1>
 		</div>
 
 		<div class="box2">
 			<img src="img/pool.png">
-			<p>PISCINA E CHURRASQUEIRA</p>
-			<h1>A piscina e churrasqueira são <b>privativas dos hóspedes</b> e a mantemos limpa com a colocação periódica de produtos. Podendo curtir com a família e amigos um lindo pôr do sol. </h1>
+			<p><?php echo $texto[6]; ?></p>
+			<h1> <?php echo $texto[7]; ?></h1>
 		</div>
 
 		<div class="box2">
 			<img src="img/home.png">
-			<p>CASA COMPLETA</p>
-			<h1>Casa mobiliada entregue com limpeza e higienização em todos os ambientes. Disponibilizamos roupas de cama e banho para os hóspedes. </h1>
+			<p><?php echo $texto[8]; ?></p>
+			<h1><?php echo $texto[9]; ?> </h1>
 		</div>
 
 

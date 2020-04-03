@@ -25,6 +25,14 @@
         });
     });
 
+
+$(function(){
+        $(".btn-toggle2").click(function(e){
+            e.preventDefault();
+            el = $(this).data('element');
+            $(el).toggle();
+        });
+    });
 </script>
 
 <?php
@@ -56,29 +64,30 @@ if($_GET != null){
     $r = $_GET["r"];
     $id = $_GET["id"];
 
-    if ($r == 1){
+    $query ="SELECT * FROM promocao_clientes WHERE (aparecer=1) ";   
 
-      
-      $query ="UPDATE reservas_site SET status='1' WHERE id='$id'";;  
-      mysqli_query ($conexao, $query);    
+    $result = mysqli_query ($conexao, $query);    
+    $comentarios_site=mysqli_num_rows($result);
 
-    }
-    if ($r == 2){
+    if ($comentarios_site <= 2){
 
-          
-      $query ="UPDATE reservas_site SET status='2' WHERE id='$id'";;  
-      mysqli_query ($conexao, $query);    
+      if ($r == 1){
 
+        
+        $query ="UPDATE promocao_clientes SET aparecer='1' WHERE id='$id'";;  
+        mysqli_query ($conexao, $query);    
 
-    }
-
-    if ($r == 3){
-
-          
-      $query ="UPDATE reservas_site SET status='3' WHERE id='$id'";;  
-      mysqli_query ($conexao, $query);    
+      }
 
     }
+
+
+      if ($r == 0){
+
+        $query ="UPDATE promocao_clientes SET aparecer='0' WHERE id='$id'";;  
+        mysqli_query ($conexao, $query);    
+
+      }
 
 }
 ?>
@@ -126,12 +135,12 @@ if($_GET != null){
 
     
 
-          <h2>Reservas canceladas</h2>
+          <h2>ONLINE</h2>
 
 
             <?php
               
-              $query ="SELECT * FROM reservas_site WHERE (status=3) ";   
+              $query ="SELECT * FROM promocao_clientes WHERE (aparecer=1) ";   
 
               $result = mysqli_query ($conexao, $query);    
               $reservas_site=mysqli_num_rows($result);
@@ -144,36 +153,25 @@ if($_GET != null){
                   while ($i < $reservas_site) {
                   $row = $result->fetch_row();  
 
-                  $datacheckin = $row[9];
-
             ?>
             <div id="box-reserva">
-                <div class="minhaDiv0"> Check-in: <?php echo date("d/m/Y", strtotime($datacheckin)); ?> | Nome do Cliente:  <?php echo $row[1]; ?>
+                <div class="minhaDiv0"> Nome do Cliente:  <?php echo $row[1]; ?>
                   <div class="minhaDivbutton"> 
                     <button type="button" class="btn-toggle" data-element="#minhaDiv<?php echo $i; ?>">Mostrar</button>
-                    <button type="button">Ligar</button>
-                    <button type="button">Whatsapp</button>
                   </div>
                 </div> 
                
                 
                 <div  id="minhaDiv<?php echo $i; ?>" class="minhaDiv">
                     
-                    <div class="line">RG: <?php echo $row[2]; ?></div>
-                    <div class="line">CPF: <?php echo $row[3]; ?></div>
-                    <div class="line">Nº de hóspedes: <?php echo $row[4]; ?></div>
-                    <div class="line">PET: <?php echo $row[5]; ?></div>
-                    <div class="line">Tel: <?php echo $row[6]." | ".$row[7]; ?></div>
-                    <div class="line">E-mail: <?php echo $row[8]; ?></div>
-                    <div class="line2">Check-in: <?php echo date("d/m/Y", strtotime($row[9]))." às ".$row[10]; ?></div>
-                    <div class="line2">Check-Out: <?php echo date("d/m/Y", strtotime($row[11])); ?></div>
-                    <div class="line">OBS: <?php echo $row[13]; ?></div>
-                    <p>
-                    <div class="line3">Data da solicitação da pré-reserva no site: <?php echo date("d/m/Y", strtotime($row[12])) ?></div>
+                    <div class="line2">Experiência: <?php echo $row[5]; ?></div>
+                    <div class="line">Hospedou-se em: <?php echo $row[3]." / ".$row[4]; ?></div>
+                    <div class="line">E-mail <?php echo $row[2]; ?></div>
+                   
 
                     <div class="minhaDivbutton"> 
-                    <a href="entrou-reserva-cancelada.php?r=2&id=<?php echo $row[0]; ?>"><button type="button" name="done">Reserva concluída</button></a>
-                    <a href="entrou-reserva-cancelada.php?r=1&id=<?php echo $row[0]; ?>"><button type="button" name="wait">Reserva em andamento</button></a>
+                    <a href="entrou-opiniao.php?r=0&id=<?php echo $row[0]; ?>"><button type="button" name="exit">Retirar do site</button></a>
+                   
                     </div>
                 </div>
             </div>
@@ -185,12 +183,60 @@ if($_GET != null){
             ?>
 
 
+          <br/><br/>
+          <h2>OFFLINE</h2>    
 
-            <div id="opcoes">
-              <a href="entrou-reserva.php"><button value="andamento"> Pré-reservas em andamento </button></a>
-              <a href="entrou-reserva-concluida.php"><button value="concluida"> Pré-reservas concluídas </button></a>
-              <br/><br/>
+        
+
+              <?php
+              
+              $query ="SELECT * FROM promocao_clientes WHERE (aparecer=0) ";   
+
+              $result = mysqli_query ($conexao, $query);    
+              $reservas_site=mysqli_num_rows($result);
+
+              if ($reservas_site == 0) {
+
+                echo "-";
+              } else {
+
+                  $i="0";
+                  while ($i < $reservas_site) {
+                  $row = $result->fetch_row();  
+
+                 
+
+            ?>
+            <div id="box-reserva">
+                <div class="minhaDiv0"> Nome do Cliente:  <?php echo $row[1]; ?>
+                  <div class="minhaDivbutton"> 
+                    <button type="button" class="btn-toggle2" data-element="#segundaDiv<?php echo $i; ?>">Mostrar</button>
+                  </div>
+                </div> 
+               
+                
+                <div  id="segundaDiv<?php echo $i; ?>" class="minhaDiv">
+                    
+                   
+                    <div class="line2">Experiência: <?php echo $row[5]; ?></div>
+                    <div class="line">Hospedou-se em: <?php echo $row[3]." / ".$row[4]; ?></div>
+                    <div class="line">E-mail <?php echo $row[2]; ?></div>
+                    
+                
+                  <div class="minhaDivbutton"> 
+                    <a href="entrou-opiniao.php?r=1&id=<?php echo $row[0]; ?>"><button type="button" name="done">Mostrar no site</button></a>
+                    </div>
+                </div>
             </div>
+
+            <?php
+                   $i++;
+                 } 
+              }
+
+            ?>
+
+<br/><br/><br/>
 
 
     </div>
