@@ -57,14 +57,16 @@
 
 		<div class="box2">
 			<img src="img/pett.png">
-			<p> <?php echo $texto[2]; ?></p>
-			<h1> <?php echo $texto[3]; ?> </h1>
+			<p> <?php echo $texto[2]; ?> 
+		</p>
+			<h1> <?php echo $texto[3]; ?> 
+		</h1>
 		</div>
 
 		<div class="box2">
 			<img src="img/local.png">
 			<p>	<?php echo $texto[4]; ?>
-</p>
+		</p>
 			<h1><?php echo $texto[5]; ?>
  		</h1>
 		</div>
