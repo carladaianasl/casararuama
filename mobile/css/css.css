@@ -172,6 +172,16 @@ animation: slide 15s infinite;
 }
 
 
+ h5 {
+    font-size: 17px;
+    color:black;
+    text-align: justify;
+    padding: 5px 10% 10px 10%;
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: normal;
+}
+
+
 
 
 

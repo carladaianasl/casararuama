@@ -294,6 +294,18 @@ letter-spacing: 4px;
     font-weight: normal;
 }
 
+
+ h5 {
+    font-size: 16px;
+    color:black;
+    text-align: left;
+    text-align: justify;   
+    padding: 5px 15% 10px 15%;
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: normal;
+}
+
+
 #bottom{
 	position: absolute;
 	width: 100%;
