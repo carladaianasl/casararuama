@@ -25,7 +25,31 @@ animation: slide 15s infinite;
 	}
 }
 
+.grade{
+	
+	width:100%;
+	height: auto;
+	position: relative;
+	font-family: 'Baloo Da 2', cursive;
+    font-size: 18px;
+}
 
+.imagem{
+	width: 30%;
+	display: inline-block;
+	float: left;
+	margin-left: 6%;
+}
+.imagem img{
+	width: 100%;
+}
+
+.texto{
+	width: 60%;
+	display: inline-block;
+	float: right;
+	text-align: justify;
+}
 
 .table{
 	
@@ -347,6 +371,15 @@ letter-spacing: 4px;
     text-align: left;
     text-align: justify;   
     padding: 5px 15% 10px 15%;
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: normal;
+}
+
+h6 {
+    font-size: 16px;
+    color:brown;
+    text-align: left;
+    padding: 5px 5% 5px 5%;
     font-family: 'Baloo Da 2', cursive;
     font-weight: normal;
 }

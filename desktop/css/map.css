@@ -2,10 +2,12 @@
 #corpo_meio{
 width: 100%;
 height: auto;
-position: absolute;
+margin: 0 auto;
 left: 0px;
-top:90%;
-
+top: 530px;
+position: absolute;
+padding-bottom: 40px;
+padding-top: 20px;
 
 }
 
