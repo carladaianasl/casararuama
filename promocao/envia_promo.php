@@ -15,7 +15,7 @@ $query ="insert into promocao_clientes (nome, email, mes, ano, comentario) value
 
 mysqli_query ($conexao, $query) ;
 
-header('Location: promocao.php?r=1');
+header('Location: index.php?r=1');
 exit;
 
 

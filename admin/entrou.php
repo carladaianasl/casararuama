@@ -69,7 +69,7 @@ $senha = $_GET["s"];
                 <li><a href="casa-edit.php">Editar - Inf. Casa</a></li>
                 <li><a href="tarifa-edit.php">Editar - Tarifas</a></li>
                 <li><div class="mod"></div></li>
-                <li><a href="admin.php">Logout</a></li>
+                <li><a href="index.php">Logout</a></li>
 
             </ul>
         </nav>
@@ -86,7 +86,7 @@ $senha = $_GET["s"];
                 <li><a href="entrou-reserva.php">Pré-reservas</a></li>
                 <li><a href="entrou-opiniao.php">Opiniões</a></li>
                 <li><a href="entrou-faleconosco.php">Mensagens</a></li>
-                <li class="right"><a href="admin.php">Logout</a></li>
+                <li class="right"><a href="index.php">Logout</a></li>
             </ul>
         </nav>
     </div>

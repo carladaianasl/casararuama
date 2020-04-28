@@ -23,6 +23,50 @@ body{
 
 }
 
+#login{
+	width: 20%;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	text-align: left;
+	height: auto;
+	background-color: white;
+	padding: 1% 3% 2% 2%;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+
+.login1{
+	display: block;
+	padding: 20px 0 5px 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+
+
+}
+
+.login2{
+	width: 100%;
+	height: 20px;
+	border: 1px solid lightblue;
+	border-radius: 5px;
+	padding-left: 5%;
+	height: 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+.login3{
+	width: auto;
+	background-color: darkred;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid red;
+	padding: 3%;
+	cursor: pointer;
+	font-size: 16px;
+}
 #menu-vertical{
 	position: absolute;
 	width: 250px;
@@ -336,5 +380,48 @@ margin-left: 10%;
 		float: none;
 	}
 
+
+	#login{
+	width: 80%;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	text-align: left;
+	height: auto;
+	background-color: white;
+	padding: 1% 3% 2% 2%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	
+}
+.login1{
+	display: block;
+	padding: 20px 0 5px 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+
+
+}
+
+.login2{
+	width: 90%;
+	height: 30px;
+	border: 1px solid lightblue;
+	border-radius: 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+}
+
+.login3{
+	width: auto;
+	background-color: darkred;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid red;
+	padding: 3%;
+	cursor: pointer;
+	font-size: 18px;
+}
 
 }

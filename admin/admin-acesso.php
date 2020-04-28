@@ -19,13 +19,13 @@ $senha = $_POST["senha"];
 
     if ($numLinhas == 1){
 
-      header('Location: admin/entrou.php?l='.$nome.'&s='.$senha);
+      header('Location: entrou.php?l='.$nome.'&s='.$senha);
       exit;
 
     } else {
 
 
-       header('Location: admin.php?r=1');
+       header('Location: index.php?r=1');
        exit;
     }
 
