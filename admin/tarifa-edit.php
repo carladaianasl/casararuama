@@ -145,7 +145,7 @@ if($_GET != null){
                       <input type="text" class="t1" name="t7"value="<?php echo $texto[6]; ?>"> <p>
                       <input type="text" class="t1" name="t8"value="<?php echo $texto[7]; ?>"> <p>
                       <br/>
-
+                      <input type="text" class="t1" name="t9"value="<?php echo $texto[8]; ?>"> <p>
 
                       <button name="done">ATUALIZAR</button>
                   </form>

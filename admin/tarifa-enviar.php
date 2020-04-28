@@ -10,6 +10,8 @@ $t[] = $_POST["t5"];
 $t[] = $_POST["t6"];
 $t[] = $_POST["t7"];
 $t[] = $_POST["t8"];
+$t[] = $_POST["t9"];
+
 
 
 
@@ -17,7 +19,7 @@ $t[] = $_POST["t8"];
 $conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
 
 
-for ($i=0;$i<=28;$i++){
+for ($i=0;$i<=29;$i++){
 	
 	$j=$i+21;
 

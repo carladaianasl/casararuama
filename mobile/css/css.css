@@ -45,7 +45,54 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 
+.table{
+	
+	width:90%;
+	height: 250px;
+	position: relative;
+	padding: 5%;
+	 font-family: 'Baloo Da 2', cursive;
+    color: brown;
+    font-size: 18px;
+    background-color: rgb(255,255,255,0.5);
+    }
 
+.col1{
+width: 60%;
+display: inline-block;
+float: left;
+height: 25px;
+text-align: center;
+padding: 10px 0 10px 0;
+
+}
+
+.titulo5{
+    text-align: center;
+    font-family: 'Baloo Da 2', cursive;
+    color: brown;
+    font-size: 15px;
+    width: 90%;
+    margin-left:5%;
+}
+
+.line{
+background-color: brown;
+width: 100%;
+height: 1px;
+display: inline;
+float: left;
+}
+
+.col2{
+width: 40%;
+display: inline-block;
+float: right;
+height: 25px;
+padding: 10px 0 10px 0;
+text-align: center;
+
+}
 
 
 #bottom{

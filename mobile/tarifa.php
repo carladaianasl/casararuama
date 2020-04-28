@@ -22,7 +22,7 @@
 <div id="corpo_meio">
 
 	<div class="titulo4">Tarifas</div>
-	<div class="titulo4"><font size="4px" ><b>Diárias da casa para acomodar até 7 pessoas</b></font></div>
+	<div class="titulo4"><font size="5px" ><b>Diárias da casa para acomodar até 7 pessoas</b></font></div>
 </br>
 	<div class="table">
 		<div class="col1">
@@ -72,11 +72,7 @@
 	
 	</div>
 
-
-
-
 	<div id="bottom"></div>
-	
 	
 </div>
 
@@ -84,6 +80,7 @@
 <script src="js/gallery.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/bottom.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 </html>
