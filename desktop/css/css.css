@@ -27,6 +27,40 @@ animation: slide 15s infinite;
 
 
 
+.table{
+	width: 50%;
+	position: relative;
+	height: auto;
+	text-align:center;
+	left: 25%;
+	padding: 1.5%;
+	 font-family: 'Baloo Da 2', cursive;
+    color: brown;
+    font-size: 18px;
+
+}
+
+.col1{
+width: 75.4%;
+border: 1px solid brown;
+padding: 1%;
+display: inline-block;
+float: left;
+background-color: rgb(255,255,255,0.5);
+}
+
+
+
+
+.col2{
+width: 20%;
+border: 1px solid brown;
+padding: 1%;
+display: inline-block;
+float: right;
+background-color: rgb(255,255,255,0.5);
+
+}
 
 
 
@@ -421,6 +455,7 @@ left: 0px;
     color: brown;
     font-size: 30px;
 }
+
 
 
 #meio{

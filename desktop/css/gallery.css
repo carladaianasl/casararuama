@@ -16,6 +16,13 @@ top:18%;
     font-size: 30px;
 }
 
+.titulo5{
+    text-align: center;
+    font-family: 'Baloo Da 2', cursive;
+    color: brown;
+    font-size: 30px;
+}
+
 
 #images-section {
     display: flex;
