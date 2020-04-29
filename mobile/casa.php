@@ -60,6 +60,19 @@
 	<br/>
 	<br/>
 
+	<div class="titulo4"><font size="5px"><b><?php echo $texto[10]; ?></b></font></div>
+
+	<br/>
+	
+	<?php echo "- ".$texto[11]; ?><br/>
+	<?php echo "- ".$texto[12]; ?><br/>
+	<?php echo "- ".$texto[13]; ?><br/>
+	<?php echo "- ".$texto[14]; ?><br/>
+	<?php echo "- ".$texto[15]; ?><br/>
+
+
+	<br/>
+
 	Saiba mais sobre as <a href="regras.php">regras da casa</a>.
 	<br/>
 	

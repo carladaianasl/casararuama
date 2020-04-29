@@ -3,7 +3,7 @@ document.getElementById('bottom').innerHTML =
 "<div id='bottom'>"+
 "			<div class='b1'>"+
 "				<h3><font size='4'>Casa Lagoa de Araruama</font></br>"+
-"				I'm baby pariatur tousled ramps ethical in minim. Fanny pack venmo sriracha fashion axe health goth cillum. Ramps consectetur try-hard asymmetrical master cleanse."+
+"					<b>A sua casa de veraneio na Região dos Lagos</b><br/>Aluguel por temporada de casa completa em frente a Lagoa de Araruama"+
 "			</h3>"+
 "			</div>"+
 

@@ -48,7 +48,8 @@ $conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
     $i="0";
     while ($i < $num_rows) { 
       $row = $result->fetch_row(); 
-      $texto[] = $row[1]; 
+      $texto[] = $row[1];
+      $ids[] = $row[0];
       $i++;
     }
 
@@ -133,19 +134,27 @@ if($_GET != null){
                 <form action="casa-enviar.php" method="POST">
                       
                       <label class="t1">Textos Sobre a Casa:</label>
-                      <textarea type="text" class="t1" name="t1"><?php echo $texto[0]; ?></textarea><p>
-                      <textarea type="text" class="t1" name="t2"><?php echo $texto[1]; ?></textarea><p>
+                      <textarea type="text" class="t1" name="<?php echo "t".$ids[0]; ?>"><?php echo $texto[0]; ?></textarea><p>
+                      <textarea type="text" class="t1" name="<?php echo "t".$ids[1]; ?>"><?php echo $texto[1]; ?></textarea><p>
                       <br/>
-                      <input type="text" class="t1" name="t9"value="<?php echo $texto[8]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[8]; ?>"value="<?php echo $texto[8]; ?>"> <p>
                       <br/>
-                      <input type="text" class="t1" name="t3"value="<?php echo $texto[2]; ?>"> <p>
-                      <input type="text" class="t1" name="t4"value="<?php echo $texto[3]; ?>"> <p>
-                      <input type="text" class="t1" name="t5"value="<?php echo $texto[4]; ?>"> <p>
-                      <input type="text" class="t1" name="t6"value="<?php echo $texto[5]; ?>"> <p>
-                      <input type="text" class="t1" name="t7"value="<?php echo $texto[6]; ?>"> <p>
-                      <input type="text" class="t1" name="t8"value="<?php echo $texto[7]; ?>"> <p>
-
-                      <textarea type="text" class="t1" name="t10"><?php echo $texto[9]; ?></textarea><p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[2]; ?>" value="<?php echo $texto[2]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[3]; ?>" value="<?php echo $texto[3]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[4]; ?>" value="<?php echo $texto[4]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[5]; ?>" value="<?php echo $texto[5]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[6]; ?>" value="<?php echo $texto[6]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[7]; ?>" value="<?php echo $texto[7]; ?>"> <p>
+                      <br/><br/>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[10]; ?>" value="<?php echo $texto[10]; ?>"> <p>
+                      <br/>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[11]; ?>" value="<?php echo $texto[11]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[12]; ?>" value="<?php echo $texto[12]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[13]; ?>" value="<?php echo $texto[13]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[14]; ?>" value="<?php echo $texto[14]; ?>"> <p>
+                      <input type="text" class="t1" name="<?php echo "t".$ids[15]; ?>" value="<?php echo $texto[15]; ?>"> <p>
+                      <label class="t1">Regras da Casa:</label>
+                      <textarea type="text" class="t1" name="<?php echo "t".$ids[9]; ?>"><?php echo $texto[9]; ?></textarea><p>
 
                       <button name="done">ATUALIZAR</button>
                   </form>
