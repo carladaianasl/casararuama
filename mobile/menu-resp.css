@@ -1,0 +1,53 @@
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+   background-color: rgb(255, 246, 232, 0.90);
+   
+  overflow-x: hidden;
+  transition: 0.5s;
+   box-shadow: 1px 0px 80px black;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+.overlay a {
+  padding: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+     color: #145267;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: white;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 50px;
+  top: 15px;
+  right: 35px;
+  }
+}

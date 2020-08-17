@@ -2,7 +2,7 @@
 <html land="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ADMIN</title>
+	<title>PROMOÇÃO CASA LAGOA ARARUAMA</title>
 
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:400,500|Raleway:400,700,800&display=swap" rel="stylesheet">

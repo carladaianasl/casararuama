@@ -14,7 +14,9 @@ $t[] = $_POST["t9"];
 $t[] = $_POST["t10"];
 
 
-$conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
+$conexao=mysqli_connect("casa_araruama.mysql.dbaas.com.br", "casa_araruama", "carla240390d", "casa_araruama");
+mysqli_set_charset($conexao, 'utf8');
+  
 
 
 for ($i=0;$i<10;$i++){

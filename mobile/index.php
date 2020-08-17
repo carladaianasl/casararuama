@@ -27,7 +27,9 @@
 				<div class="texto1">
 					<?php 
 
-					$conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
+					$conexao=mysqli_connect("casa_araruama.mysql.dbaas.com.br", "casa_araruama", "carla240390d", "casa_araruama");
+					mysqli_set_charset($conexao, 'utf8');
+  
   
 					  $query ="SELECT * FROM textos WHERE (status=1) ";   
 					  $result = mysqli_query ($conexao, $query); 
@@ -47,7 +49,7 @@
 					<?php echo $texto[1]; ?>
 				</div>
 				<a href="reservas.php" style="text-decoration: none; color:white;"><div class="button button1">RESERVE AGORA</div></a>
-		<div class="texto3"><a href="casa.html" style="text-decoration: none; color: black;">SAIBA MAIS</a></div>
+		<div class="texto3"><a href="casa.php" style="text-decoration: none; color: black;">SAIBA MAIS</a></div>
 		</div>
 
 
@@ -87,15 +89,20 @@
 
 		<?php
 
-		$conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
+		$conexao=mysqli_connect("casa_araruama.mysql.dbaas.com.br", "casa_araruama", "carla240390d", "casa_araruama");
+		mysqli_set_charset($conexao, 'utf8');
+  
 
-		$query ="SELECT * FROM promocao_clientes WHERE (aparecer='0') " ;		
+		$query ="SELECT * FROM promocao_clientes WHERE (aparecer='1') " ;		
 		$result = mysqli_query ($conexao, $query) ;	
 		while($row = $result->fetch_row()) {
 		  $rows[]=$row;
 		}
 
-		$number = count($rows);
+		$number=0;
+		if (is_array($rows)){
+			$number=count($rows);
+		}
 
 		if ($number >= 2){
 
@@ -112,6 +119,12 @@
 			<h2>"<?php echo $rows[1][5]; ?>"</h2>
 			<h3><?php echo $rows[1][1]."  |  ".$rows[1][3]." / ".$rows[1][4]; ?></h3>
 		</div>
+		<div class="box3">
+			<h2>"<?php echo $rows[2][5]; ?>"</h2>
+			<h3><?php echo $rows[2][1]."  |  ".$rows[2][3]." / ".$rows[2][4]; ?></h3>
+		</div>
+
+		<div class="titulo"><a href="todos.php"><font style="font-size: 15px; text-decoration: none; color: black;"><u>Veja todos os comentários</font></u></a></div>
 		
 		<?php
 		} else {

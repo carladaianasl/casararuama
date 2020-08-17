@@ -21,34 +21,31 @@
 
 <div id="corpo_meio">
 
-	<div class="titulo4">Regras da Casa</div>
+	<div class="titulo4">Comentários de nossos hóspedes</div>
 	<h5>
 
-	<?php 
+<?php 
 
-					$conexao=mysqli_connect("casa_araruama.mysql.dbaas.com.br", "casa_araruama", "carla240390d", "casa_araruama");
-					mysqli_set_charset($conexao, 'utf8');
-  
-					  $query ="SELECT * FROM textos WHERE (status=2) ";   
-					  $result = mysqli_query ($conexao, $query); 
-					  $num_rows = mysqli_num_rows($result);
-					    
-					  $i="0";
-					    while ($i < $num_rows) { 
-					      $row = $result->fetch_row(); 
-					      $texto[] = $row[1]; 
-					      $i++;
-					  }
+		$conexao=mysqli_connect("casa_araruama.mysql.dbaas.com.br", "casa_araruama", "carla240390d", "casa_araruama");
+		mysqli_set_charset($conexao, 'utf8');
 
-					  echo $texto[9];
-					?>
+		$query ="SELECT * FROM promocao_clientes" ;		
+		$result = mysqli_query ($conexao, $query) ;	
+		while($row = $result->fetch_row()) {		
 
-	
-	
+			?>
 
+				<div class="box4">
+					<h2>"<?php echo $row[5]; ?>"</h2>
+					<h3><?php echo $row[1]."  |  ".$row[3]." / ".$row[4]; ?></h3>
+				</div>
 
-	</h5>
+			<?php 
 
+		}
+
+			
+		?>
 
 
 	<div id="bottom"></div>

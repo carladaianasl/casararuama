@@ -2,6 +2,9 @@ body {
 background-color: white;
 }
 
+
+	
+
 #topo {
 background-image: url(../img/bg2.png);
 background-repeat: no-repeat;
@@ -312,6 +315,8 @@ letter-spacing: 4px;
 
 
 
+
+
 #box3{
 	width: 90%;
 	height: auto;
@@ -331,6 +336,17 @@ letter-spacing: 4px;
 	float: left;
 	padding: 20px 0px 20px 0px;
 	text-align: center;
+	
+}
+
+
+.box4{
+	display:block;
+	width: 100%;
+	height: auto;
+	float: left;
+	padding: 20px 0px 20px 0px;
+	text-align: justify;
 	
 }
 	
@@ -384,6 +400,15 @@ h6 {
     font-weight: normal;
 }
 
+
+.h7 {
+    font-size: 14px;
+    color:black;
+    text-align: left;
+    padding: 5px 15% 10px 15%;
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: normal;
+}
 
 #bottom{
 	position: absolute;

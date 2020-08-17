@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html land="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>Casa Lagoa de Araruama</title>
@@ -27,7 +27,8 @@
 			
 			<?php 
 
-					$conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
+					$conexao=mysqli_connect("casa_araruama.mysql.dbaas.com.br", "casa_araruama", "carla240390d", "casa_araruama");
+					mysqli_set_charset($conexao, 'utf8');
   
 					  $query ="SELECT * FROM textos WHERE (status=1) ";   
 					  $result = mysqli_query ($conexao, $query); 
@@ -48,7 +49,7 @@
 			<?php echo $texto[1]; ?>
 		</div>
 		<div class="button button1"><a href="reservas.php" style="text-decoration: none; color:white;">RESERVE AGORA</a></div>
-		<div class="texto3"><a href="casa.html" style="text-decoration: none; color: black;">SAIBA MAIS</a></div>
+		<div class="texto3"><a href="casa.php" style="text-decoration: none; color: black;">SAIBA MAIS</a></div>
 </div>
 
 	
@@ -84,7 +85,8 @@
 
 		<?php
 
-		$conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
+		$conexao=mysqli_connect("casa_araruama.mysql.dbaas.com.br", "casa_araruama", "carla240390d", "casa_araruama");
+		mysqli_set_charset($conexao, 'utf8');
 
 		$query ="SELECT * FROM promocao_clientes WHERE (aparecer='1') " ;		
 		$result = mysqli_query ($conexao, $query) ;	
@@ -92,7 +94,11 @@
 		  $rows[]=$row;
 		}
 
-		$number = count($rows);
+		$number=0;
+		if (is_array($rows)){
+			$number=count($rows);
+		}
+
 
 		if ($number == 3){
 
@@ -100,6 +106,7 @@
 
 		<div id="box3">
 		<div class="titulo">Comentários de nossos hóspedes</div>	
+
 		<div class="box3">
 			<h2>"<?php echo $rows[0][5]; ?>"</h2>
 			<h3><?php echo $rows[0][1]."  |  ".$rows[0][3]." / ".$rows[0][4]; ?></h3>
@@ -114,6 +121,8 @@
 			<h3><?php echo $rows[2][1]."  |  ".$rows[2][3]." / ".$rows[2][4]; ?></h3>
 		</div>
 		
+		<div class="titulo"><a href="todos.php"><font style="font-size: 15px;"><u>Veja todos os comentários</font></u></a></div>
+		
 		<?php
 		} else {
 
@@ -122,12 +131,14 @@
 
 		<div id="box3">
 		<div class="titulo">Comentários de nossos hóspedes <br/><br/>[...] <br/><br/></div>	
+
 		
 
 		<?php
 		}
 
 		?>
+
 
 
 

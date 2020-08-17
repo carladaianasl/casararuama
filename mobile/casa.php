@@ -25,7 +25,8 @@
 <h5>	
 <?php 
 
-					$conexao = mysqli_connect('localhost', 'root', '', 'casa_araruama') ;
+					$conexao=mysqli_connect("casa_araruama.mysql.dbaas.com.br", "casa_araruama", "carla240390d", "casa_araruama");
+					mysqli_set_charset($conexao, 'utf8');
   
 					  $query ="SELECT * FROM textos WHERE (status=2) ";   
 					  $result = mysqli_query ($conexao, $query); 
@@ -49,26 +50,33 @@
 
 	<br/>
 	
-	<?php echo "- ".$texto[2]; ?><br/>
-	<?php echo "- ".$texto[3]; ?><br/>
-	<?php echo "- ".$texto[4]; ?><br/>
-	<?php echo "- ".$texto[5]; ?><br/>
-	<?php echo "- ".$texto[6]; ?><br/>
-	<?php echo "- ".$texto[7]; ?><br/>
+	<?php
+	for ($i=2; $i<=7; $i++){
+
+		if($texto[$i]<>""){
+	 		echo "- ".$texto[$i]; 
+	 		?><br/><?
+		}
+	}
+	?>
 
 	</b>
 	<br/>
 	<br/>
 
-	<div class="titulo4"><font size="5px"><b><?php echo $texto[10]; ?></b></font></div>
+	<div class="titulo4"><font size="3px"><b><?php echo $texto[10]; ?></b></font></div>
 
 	<br/>
-	
-	<?php echo "- ".$texto[11]; ?><br/>
-	<?php echo "- ".$texto[12]; ?><br/>
-	<?php echo "- ".$texto[13]; ?><br/>
-	<?php echo "- ".$texto[14]; ?><br/>
-	<?php echo "- ".$texto[15]; ?><br/>
+
+	<?php
+	for ($i=11; $i<=15; $i++){
+
+		if($texto[$i]<>""){
+	 		echo "- ".$texto[$i]; 
+	 		?><br/><?
+		}
+	}
+	?>
 
 
 	<br/>
