@@ -14,7 +14,7 @@ document.getElementById('bottom').innerHTML =
 "				<a href='https://www.facebook.com/casaemararuama'><img src='img/face.png'></a>"+
 "			</div>"+
 "			<div id='b2texto'>"+
-"				Copyright © 2010 | Developed by Carla Carvalho"+
+"				Copyright © 2020 | Developed by <a href='https://www.linkedin.com/in/carla-carvalho-009534b1/'>Carla Carvalho</a>"+
 "			</div>"+
 "		</div>"+
 
